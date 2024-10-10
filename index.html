@@ -49,8 +49,6 @@
 				justify-content:center;
 			
 			}
-
-    
       header {
         background: darkblue;
         padding: 10px 20px;
@@ -75,7 +73,7 @@
         font-size: 1.5rem;
       }
 
-      .nav-links {
+  .nav-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +98,6 @@
       
       }
 			.con{
-				
 				color:darkblue
 			}
 
@@ -138,13 +135,13 @@
         display: flex;
       }
 
-      .sprite {
+      /* .sprite {
         width: 32px;
         height: 32px;
         background-image: url('spritesheet.png');
         background-size: 96px 32px; 
         margin-left: 10px;
-      }
+      } */
       .nav-links .space {
         margin-left: 120px;
       }
@@ -170,6 +167,7 @@
 	
 			}
 			.middle{
+        position:relative;
 				background-color:#E3F8FF;
         background-image: url('./bg-how-does-office365-mailbox-work.jpg');
         background-repeat: no-repeat;
@@ -178,11 +176,18 @@
 			}
       .centered-image{
         margin-left: 53px;
-   
+        position: relative;
       }
-
-     
-      
+  .video {
+  position: absolute;
+  top: 50%; 
+  left:85%;
+  /* left: 50%;  */
+  transform: translate(-50%, -50%);
+  width: 50px; 
+  height: auto;
+  text-align: end;
+}   
 			@media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
@@ -225,8 +230,11 @@
       .change{
         margin-top: -30px;
       }
-}
 
+      .video{
+        display: none;
+      }
+}
 
 .change{
 	display:flex
@@ -245,7 +253,6 @@ line-height: 1;
 color:darkblue;
 font-weight:600
 }
-
 
 .for{
 margin-left:10px
@@ -408,7 +415,9 @@ margin-left:10px
       align-items: flex-start;
     }
 
-
+    .video{
+        display: none;
+      }
     .nav-links {
       flex-direction: column;
       align-items: flex-start;
@@ -444,6 +453,9 @@ margin-left:10px
     .text-container {
       font-size: 1rem; /* Adjust font size for medium screens */
     }
+    .video{
+        display: none;
+      }
   }
 
   @media (max-width: 397px) {
@@ -451,6 +463,9 @@ margin-left:10px
       max-width: 40%; /* Further scale down the image for small screens */
     }
 
+    .video{
+        display: none;
+      }
     .text-container {
       font-size: 0.9rem; /* Adjust font size for small screens */
     }
@@ -784,6 +799,7 @@ iaculis at erat pellentesque.Amet mauris commodo quis imperdiet massa tincidunt.
 </div><br/>
 <div class="middle">
   <div class="centered-image"><br/>
+    <img src="video-play-icon.png" alt="Video Play Icon" class="video" /><br/><br/>
 	<p style="font-size:15px;font-weight:600;color:darkblue">Quisque egesras diam in arcu cursus euismod</p><br/>
 	<p style="font-size:13px;font-weight:600">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p><br/>
 	<p style="font-size: 12px;">1. Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
