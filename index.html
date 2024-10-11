@@ -301,6 +301,7 @@ margin-left:10px
     padding: 4px;
     text-align: center; 
 }
+
 .off {
     font-size: 0.8em; 
 }
@@ -312,7 +313,7 @@ margin-left:10px
     gap: 10px; 
 }
 
-.fst-line p{
+/* .fst-line p{
   font-size: 14px;
 }
 .second-line p{
@@ -336,14 +337,113 @@ margin-left:10px
 		color:darkblue;
 		
 }
-.middle-row{
-	display:flex;
-		flex-direction:row;
-		gap:14px;
-    justify-content: center;
-	
-		font-size:12px
+ */
+
+ .fst-line, .second-line {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: space-between;
+    color: darkblue;
 }
+
+.fst-line p, .second-line p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px; /* Space for the sprite image */
+    background-image: url('./otherlinks-sprite.png'); /* Your sprite image */
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 20px; /* Adjust based on the height of each icon */
+    width: auto;
+}
+
+.icon {
+    width: 20px; /* Ensure width for each icon */
+    height: 20px; /* Ensure height for each icon */
+}
+
+/* Background positions for each icon based on vertical sprite */
+.icon-first {
+    background-position: 0 0; /* First icon */
+}
+
+.icon-second {
+    background-position: 0 -40px; /* Second icon (move down by 20px) */
+}
+
+.icon-third {
+    background-position: 0 -100px; /* Third icon (move down by 40px) */
+}
+
+.icon-fourth {
+    background-position: 0 -60px; /* Fourth icon (move down by 60px) */
+}
+
+.icon-fifth {
+    background-position: 0 -170px; /* Fifth icon (move down by 80px) */
+}
+
+.icon-sixth {
+    background-position: 0 -40px; /* Sixth icon (move down by 100px) */
+}
+
+
+.middle-row {
+    display: flex;
+    flex-direction: row;
+    gap: 14px; /* Space between items */
+    justify-content: center;
+    font-size: 12px;
+    align-items: center; /* Align text vertically with icons */
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    padding-left: 25px; /* Space for the sprite image */
+    background-image: url('product-icon-sprites.png'); /* Your sprite image */
+    background-repeat: no-repeat;
+    /* background-size: auto; */
+    width:auto;
+    height: 20px; /* Height of each icon */
+    /* background-position: 0 0;  */
+}
+
+/* Background positions for each icon */
+.icon-overview {
+    background-position: 0 0; /* First icon at the top */
+}
+
+.icon-features {
+    background-position: 0 -35px; /* Second icon (move down 20px) */
+}
+
+.icon-how-it-works {
+    background-position: 0 -64px; /* Third icon (move down 40px) */
+}
+
+.icon-user-manual {
+    background-position: 0 -98px; /* Fourth icon (move down 60px) */
+}
+
+.icon-faq {
+    background-position: 0 -135px; /* Fifth icon (move down 80px) */
+}
+
+.icon-videos {
+    background-position: 0 -170px; /* Sixth icon (move down 100px) */
+}
+
+.icon-pricing {
+    background-position: 0 -203px; /* Seventh icon (move down 120px) */
+}
+
+.icon-screenshots {
+    background-position: 0 -240px; /* Eighth icon (move down 140px) */
+}
+
 .footer-row {
             display: flex;
 					
@@ -373,16 +473,19 @@ margin-left:10px
    
     padding: 6px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
+   font-size: 12px;
     margin: 20px auto; 
 }
+.middle-row p{
+  font-size: 12px;
+}
 
-.middle-row p {
+/* .middle-row p {
     font-size: 14px; 
     color: #333; 
     margin: 10px 0; 
     cursor: pointer;
-}
+} */
 
 .ths {
   background-image: url('/accelerate_img.jpg');
@@ -725,11 +828,11 @@ font-size: 14px;
 
 				</div>
 			
-				<div class="fst-line">
+				<!-- <div class="fst-line">
 					<p>Scelerisque eleifend</p>
 				
 			
-			<p>Mattis nunc sed blandit</p>
+			   <p>Mattis nunc sed blandit</p>
 					
 					
 						<p>Mattis nunc sed blandit</p>
@@ -740,12 +843,25 @@ font-size: 14px;
 						<p>Felis eget nunc lobortis</p>
 						<p>Felis eget nunc lobortis</p>
 					</div>
-				
+				 -->
+
+         <div class="fst-line">
+          <p class="icon icon-first">Scelerisque eleifend</p>
+          <p class="icon icon-second">Mattis nunc sed blandit</p>
+          <p class="icon icon-third">Mattis nunc sed blandit</p>
+      </div>
+      
+      <div class="second-line">
+          <p class="icon icon-fourth">Felis eget nunc lobortis</p>
+          <p class="icon icon-fifth">Felis eget nunc lobortis</p>
+          <p class="icon icon-sixth">Felis eget nunc lobortis</p>
+      </div>
+      
 			</div>
 			
     </section>
-<div class="middle-row">
-
+<!-- <div class="middle-row">
+ 
 
 	<p>Overview</p>
 	<p>Features</p>
@@ -755,16 +871,18 @@ font-size: 14px;
 	<p>Videos</p>
 	<p>Pricing</p>
 	<p>Screenshots</p>
-</div>
-
-<!-- <div class="ths">
-  <div class="lorem-th">
-    <div class="text-container">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br/>
-      dolore magna aliqua - <span style="color:blue">Now 10X Faster!</span>
-    </div>
-  </div>
 </div> -->
+
+<div class="middle-row">
+  <p class="icon icon-overview">Overview</p>
+  <p class="icon icon-features">Features</p>
+  <p class="icon icon-how-it-works">How it works</p>
+  <p class="icon icon-user-manual">User Manual</p>
+  <p class="icon icon-faq">FAQ</p>
+  <p class="icon icon-videos">Videos</p>
+  <p class="icon icon-pricing">Pricing</p>
+  <p class="icon icon-screenshots">Screenshots</p>
+</div>
 <div class="ths">
   <div class="lorem-th">
     <!-- <img src="./accelerate_img.jpg" alt="Accelerate Image" class="responsive-img"/> -->
